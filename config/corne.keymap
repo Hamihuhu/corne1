@@ -107,24 +107,35 @@
             label = "Media";
         };
 
+        test {
+            bindings = <
+&trans  &kp Q           &kp W   &kp E            &kp R   &kp T        &kp Y   &trans  &trans  &trans  &trans  &tog 5
+&trans  &kp LEFT_ARROW  &trans  &kp RIGHT_ARROW  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans  &trans           &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans           &trans  &kp SPACE    &trans  &trans  &trans
+            >;
+
+            label = "Test";
+        };
+
         adjust_layer {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &tog 5        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
             label = "Adjust";
         };
+    };
 
-        layer_6 {
-            bindings = <
-&trans  &kp Q           &kp W   &kp E            &kp R   &kp T        &kp Y   &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW  &trans  &kp RIGHT_ARROW  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans  &trans           &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans           &trans  &kp SPACE    &trans  &trans  &trans
-            >;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adj {
+            if-layers = <1 2>;
+            then-layer = <5>;
         };
     };
 };

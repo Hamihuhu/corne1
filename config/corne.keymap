@@ -135,7 +135,7 @@
 
         adj {
             if-layers = <1 2>;
-            then-layer = <5>;
+            then-layer = <6>;
         };
     };
 };

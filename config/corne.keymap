@@ -37,6 +37,17 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
+
+        lt_alt: lt_alt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ALT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -52,10 +63,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp Q            &kp W            &kp F         &kp P              &kp B        &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
-&mt LEFT_GUI TAB  &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LCTRL S  &hrl LEFT_SHIFT T  &kp G        &kp M        &hrr LEFT_SHIFT N  &hrr LCTRL E  &hrr LEFT_ALT I  &hrr LEFT_GUI O  &kp APOS
-&kp LSHFT         &kp Z            &kp X            &kp C         &kp D              &kp V        &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp LEFT_SHIFT
-                                                    &kp LCTRL     &lt 1 BACKSPACE    &kp ENTER    &lt 3 SPACE  &lt 2 BACKSPACE    &mo 4
+&kp ESC           &kp Q            &kp W            &kp F         &kp P                &kp B        &kp J        &kp L                &kp U         &kp Y            &kp SEMI         &kp DELETE
+&mt LEFT_GUI TAB  &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LCTRL S  &hrl LEFT_SHIFT T    &kp G        &kp M        &hrr LEFT_SHIFT N    &hrr LCTRL E  &hrr LEFT_ALT I  &hrr LEFT_GUI O  &kp APOS
+&kp LSHFT         &kp Z            &kp X            &kp C         &kp D                &kp V        &kp K        &kp H                &kp COMMA     &kp DOT          &kp FSLH         &kp LEFT_SHIFT
+                                                    &kp LCTRL     &lt_alt 1 BACKSPACE  &kp ENTER    &lt 3 SPACE  &lt_alt 2 BACKSPACE  &mo 4
             >;
         };
 

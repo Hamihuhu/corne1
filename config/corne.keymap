@@ -59,14 +59,15 @@
                 <&macro_press>,
                 <&mmv MOVE_LEFT>,
                 <&macro_release>,
+                <&mmv MOVE_LEFT>,
                 <&macro_press>,
                 <&mmv MOVE_RIGHT>,
                 <&macro_release>,
                 <&mmv MOVE_RIGHT>;
 
             label = "SHAKE_MOUSE";
-            wait-ms = <50>;
-            tap-ms = <50>;
+            wait-ms = <40>;
+            tap-ms = <60>;
         };
     };
 

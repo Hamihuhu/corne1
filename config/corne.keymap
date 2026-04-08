@@ -144,10 +144,10 @@
 
         layer_7 {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans        &trans           &trans  &trans
-&trans  &trans  &mkp MB2  &mkp MB3  &mkp MB1  &trans    &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans    &mmv MOVE_UP    &mmv MOVE_LEFT   &trans        &trans           &trans  &trans
-                          &trans    &trans    &trans    &shake_mouse    &trans           &trans
+&trans  &trans  &kp LC(W)  &trans    &trans    &trans       &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans        &trans           &trans  &trans
+&trans  &trans  &mkp MB2   &mkp MB3  &mkp MB1  &kp LC(G)    &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans       &mmv MOVE_UP    &mmv MOVE_LEFT   &trans        &trans           &trans  &trans
+                           &trans    &trans    &trans       &shake_mouse    &trans           &trans
             >;
         };
 

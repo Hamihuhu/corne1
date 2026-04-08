@@ -55,9 +55,10 @@
         shake_mouse: shake_mouse {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_X(-100) &mmv MOVE_X(100)>;
+            bindings = <&mmv MOVE_LEFT &mmv MOVE_RIGHT &kp A &kp LC(F)>;
             label = "SHAKE_MOUSE";
             wait-ms = <30>;
+            tap-ms = <30>;
         };
     };
 
